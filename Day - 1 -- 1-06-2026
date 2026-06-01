@@ -1,3 +1,5 @@
+Java 
+
 // Problem -- 1 
 // Convert the given temprature from celcius to Ferah...
 import java.util.Scanner;
@@ -110,7 +112,68 @@ class Solution {
     }
 }
 
+PYTHON 
+Problem 1: Convert Celsius to Fahrenheit
+celsius = float(input())
 
+fahrenheit = (celsius * 9.0 / 5.0) + 32.0
+
+print(fahrenheit)
+
+
+Problem 2: Swap Values of Two Variables
+a = int(input())
+b = int(input())
+
+# Swapping
+temp = a
+a = b
+b = temp
+
+print(a)
+print(b)
+
+Problem 3: Conditional Branching (Nested If-Else)
+age = int(input())
+
+if age >= 18:
+    if age >= 100:
+        print("you can vote in your home only")
+    else:
+        print("you can vote in the voting booth only")
+else:
+    if age < 0:
+        print("Enter a valid age number...")
+    else:
+        print("you are not eligible for voting...")
+
+
+LeetCode 1: Two Sum (Brute Force)
+class Solution:
+    def twoSum(self, nums, target):
+        for i in range(len(nums) - 1):
+            for j in range(i + 1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+
+        return [0, 0]
+
+LeetCode 169: Majority Element (Brute Force)
+class Solution:
+    def majorityElement(self, nums):
+        n = len(nums)
+
+        for i in range(n):
+            count = 0
+
+            for j in range(n):
+                if nums[i] == nums[j]:
+                    count += 1
+
+            if count > n // 2:
+                return nums[i]
+
+        return -1
 
 
 
