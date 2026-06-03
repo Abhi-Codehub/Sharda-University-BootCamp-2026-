@@ -11,8 +11,8 @@ class Solution {
     }
 }
 
-// Problem -- 2
-// Palindrome of a String 
+Problem -- 2
+Palindrome of a String 
 import java.util.Scanner;
 public class Main
 {
