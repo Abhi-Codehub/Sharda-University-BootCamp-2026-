@@ -34,6 +34,131 @@ public class Main {
 	}
 }
 
+Program -- 3
+Factorial of a Number
 
+public class Main {
+        
+    public static int factorial(int n) {
+        // base condition 
+        if(n == 1 || n == 0){
+            return 1;
+        }
+        // logic 
+        return n * factorial(n - 1);
+    }    
+	public static void main(String[] args) {
+	    System.out.println(factorial(5));
+	}
+}
 
+Program -- 4
+Fibonacci series using iterative approach
 
+public class Main {
+	public static void main(String[] args) {
+	    int n = 5;
+	    int a = 0;
+	    int b = 1;
+	    for(int i = 1; i <= n; i++){
+	        System.out.print(a + " ");
+	        int c = a + b;
+	        a = b;
+	        b = c;
+	    }
+	}
+}
+
+Program -- 5
+Fibonacci series using recursive approach
+public class Main {
+    
+    public static int fibo(int n){
+        // base condition 
+        if(n == 0){
+            return 0;
+        }
+        if(n == 1){
+            return 1;
+        }
+        
+        // logic 
+        return fibo(n - 1) + fibo(n - 2);
+    }
+    
+	public static void main(String[] args) {
+	    System.out.println(fibo(6));
+	}
+}
+
+Problem -- 6
+Binary string without consecutive one's
+public class Main {
+    
+    public static int binaryString(int n){
+        // base condition 
+        if(n == 0){
+            return 1;
+        }
+        if(n == 1){
+            return 2;
+        }
+        
+        // logic 
+        return binaryString(n - 1) + binaryString(n - 2);
+    }
+    
+	public static void main(String[] args) {
+	    System.out.println(binaryString(5));
+	}
+}
+
+Problem -- 7
+Tiling Problem
+public class Main {
+    
+    public static int tiling(int n){
+        // base condition 
+        if(n < 4){
+            return 1;
+        }
+        
+        // logic 
+        return tiling(n - 1) + tiling(n - 4);
+    }
+    
+	public static void main(String[] args) {
+	    System.out.println(tiling(5));
+	}
+}
+
+Problem -- 8
+Climbing stairs 
+class Solution {
+    public int climbStairs(int n) {
+      if(n <= 2){
+        return n;
+      }  
+      return climbStairs(n - 1) + climbStairs(n - 2);
+    }
+}
+
+Problem -- 9
+House Robber leetcode 198
+class Solution {
+
+    public int robFrom(int[] nums, int index){
+        // base condition 
+        if(index >= nums.length){
+            return 0;
+        }
+        // logic
+            int pick = nums[index] + robFrom(nums, index + 2);
+            int notPick = robFrom(nums, index + 1);
+        
+        return Math.max(pick, notPick);
+    }
+    public int rob(int[] nums) {
+        return robFrom(nums, 0);       
+    }
+}
