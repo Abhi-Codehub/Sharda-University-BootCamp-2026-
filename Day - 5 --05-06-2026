@@ -169,7 +169,7 @@ public class Main
 }
 
 // LinkedList
-// Creation + Traversal
+// Insertion at anyGivenPosition
 // Define Linkedlist
 class Node {
     int data;
