@@ -1,5 +1,5 @@
 // Problem - 1
-// deletion of a data from the linkedlist
+// deletion of a data from the head of the linkedlist
 class Node {
     int data;
     Node next;
@@ -30,6 +30,16 @@ public class Main
         }
         temp.next = null;
     }
+    public static void deleteFromAnyGivenPosition(int position) {
+        if(head == null){
+            return;
+        }
+        Node temp = head;
+        for(int i = 1; i < position - 1; i++) {
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+    }
     
     public static void traversal() {
         
@@ -51,7 +61,8 @@ public class Main
 		head.next.next = new Node(30);
 		head.next.next.next = new Node(40);
 		traversal();
-		deleteFromTail();
+		deleteFromAnyGivenPosition(3);
+		//deleteFromTail();
 		//deletefromHead();
 		traversal();
 
